@@ -9,11 +9,11 @@ body {
 
 #card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  grid-template-columns: repeat(5, 1fr); /* Always 5 columns */
   gap: 10px;
-  max-width: 100%;
   padding: 10px;
   box-sizing: border-box;
+  max-width: 100vw;
   margin: 0 auto;
 }
 
@@ -22,14 +22,15 @@ body {
   color: black;
   border: 1px solid #ccc;
   border-radius: 8px;
-  aspect-ratio: 2 / 3; /* Ensures consistent card shape */
+  width: 100%;              /* Fill the column */
+  aspect-ratio: 2 / 3;      /* Maintain playing card shape */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  font-size: clamp(0.8rem, 2vw, 1.2rem); /* Scale text with screen */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .red {
