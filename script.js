@@ -12,9 +12,6 @@ for (let suit of suits) {
   }
 }
 
-// Remove 1 random card to make 51
-deck.splice(Math.floor(Math.random() * deck.length), 1);
-
 // Shuffle using Fisher-Yates
 for (let i = deck.length - 1; i > 0; i--) {
   let j = Math.floor(Math.random() * (i + 1));
